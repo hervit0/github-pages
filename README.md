@@ -1,5 +1,7 @@
 # Github Pages
 
+[![CircleCI](https://circleci.com/gh/hervit0/github-pages/tree/master.svg?style=svg)](https://circleci.com/gh/hervit0/github-pages/tree/master)
+
 [Go!](http://hervit0.github.io/github-pages)
 
 ## Notes
@@ -8,6 +10,10 @@
 
 - [Using `gh-pages` and `create-react-app`](https://github.com/gitname/react-gh-pages). Tip: Create your git repo first
 - deploy: `npm run deploy`
+
+### Circle CI
+
+- [Configuration API](https://circleci.com/docs/2.0/configuration-reference/)
 
 ### Troubleshooting
 
