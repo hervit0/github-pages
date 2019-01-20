@@ -12,6 +12,7 @@
     "it": false
   },
   "parser": "babel-eslint",
+  "root": true,
   "parserOptions": {
     "ecmaFeatures": {
       "jsx": true,
@@ -19,7 +20,13 @@
     }
   },
   "rules": {
-    "no-console": "off"
+    "no-console": "off",
+    "indent": ["error", 2],
+    "linebreak-style": ["error", "unix"],
+    "quotes": ["error", "double"],
+    "semi": ["error", "never"],
+    "comma-dangle": ["error", "never"],
+    "no-cond-assign": ["error", "always"]
   },
   "settings": {
     "react": {

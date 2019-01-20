@@ -1,6 +1,7 @@
-import React, { Component } from 'react'
-import logo from './logo.svg'
-import './App.css'
+import React, { Component } from "react"
+import logo from "./logo.svg"
+import "./App.css"
+import MyButton from "components/buttons/Button"
 
 class App extends Component {
   render () {
@@ -11,6 +12,7 @@ class App extends Component {
           <p>
             Bom dia!
           </p>
+          <MyButton>Wow</MyButton>
         </header>
       </div>
     )
