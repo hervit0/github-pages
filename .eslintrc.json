@@ -26,7 +26,8 @@
     "quotes": ["error", "double"],
     "semi": ["error", "never"],
     "comma-dangle": ["error", "never"],
-    "no-cond-assign": ["error", "always"]
+    "no-cond-assign": ["error", "always"],
+    "react/prop-types": "off"
   },
   "settings": {
     "react": {
