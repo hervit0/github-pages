@@ -3,6 +3,7 @@ import logo from "./logo.svg"
 import "./App.css"
 import MyButton from "components/buttons/Button"
 import TopBar from "components/bar/TopBar"
+import Router from "navigation/Router"
 
 class App extends Component {
   render() {
@@ -14,6 +15,9 @@ class App extends Component {
           <p>Bom dia!</p>
           <MyButton>Wow</MyButton>
         </header>
+        <body>
+          <Router />
+        </body>
       </div>
     )
   }
