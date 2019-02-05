@@ -8,6 +8,7 @@ import ListItemText from "@material-ui/core/ListItemText"
 import Avatar from "@material-ui/core/Avatar"
 import ImageIcon from "@material-ui/icons/Image"
 import WorkIcon from "@material-ui/icons/Work"
+import InboxIcon from "@material-ui/icons/Inbox"
 import BeachAccessIcon from "@material-ui/icons/BeachAccess"
 
 const styles = theme => ({
@@ -34,6 +35,14 @@ const NavBar = ({ classes }) => (
           <WorkIcon />
         </Avatar>
         <ListItemText primary="Contacts" secondary="Jan 7, 2014" />
+      </ListItem>
+    </Link>
+    <Link to="/todo" style={{ textDecoration: "none" }}>
+      <ListItem>
+        <Avatar>
+          <InboxIcon />
+        </Avatar>
+        <ListItemText primary="Inbox" secondary="Top Secret" />
       </ListItem>
     </Link>
     <Link to="/" style={{ textDecoration: "none" }}>

@@ -3,6 +3,7 @@ import { Route, BrowserRouter, Switch } from "react-router-dom"
 import Dogs from "components/queries/Dogs"
 import Notfound from "navigation/errors/NotFound"
 import NavBar from "components/bar/NavBar"
+import TodoMain from "components/todo/TodoMain"
 
 const Prout = () => (
   <h1>
@@ -18,6 +19,7 @@ const Router = () => (
       <Switch>
         <Route exact path="/" component={Prout} />
         <Route path="/dogs" component={Dogs} />
+        <Route path="/todo" component={TodoMain} />
         <Route component={Notfound} />
       </Switch>
     </div>

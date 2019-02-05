@@ -3,37 +3,35 @@
 
 version: 2
 jobs:
-  build:
+  buildJob:
     docker:
       - image: circleci/node:7.10
-
     working_directory: ~/repo
-
-    branches:
-      ignore:
-        - gh-pages
-
     steps:
       - checkout
-
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
           - v1-dependencies-
-
       - run:
           name: "Install dependencies"
           command: npm install
-
       - save_cache:
           paths:
             - node_modules
           key: v1-dependencies-{{ checksum "package.json" }}
-
       - run:
           name: "Run unit tests"
           command: npm test
-
       - run:
           name: "Run linter"
           command: npm run lint
+
+workflows:
+  version: 2
+  shipWorkflow:
+    jobs:
+      - buildJob:
+          filters:
+            branches:
+              only: master
