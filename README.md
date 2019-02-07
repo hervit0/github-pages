@@ -15,6 +15,12 @@
 
 - [Configuration API](https://circleci.com/docs/2.0/configuration-reference/)
 - [Github pages and Circle CI](https://blog.frederikring.com/articles/deploying-github-pages-circle-ci/)
+- Add SSH permissions:
+```
+openssl genrsa -out ~/.ssh/circleci 2048
+ssh-keygen -y -f ~/.ssh/circleci > ~/.ssh/circleci.pub
+ssh-keygen -m pem -f ~/.ssh/circleci
+```
 
 ### Troubleshooting
 

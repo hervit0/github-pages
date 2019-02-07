@@ -14,6 +14,9 @@ jobs:
       - GH_NAME: circle-ci-builder
     steps:
       - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "50:ec:0f:3a:e2:5f:ab:bf:15:34:8f:ec:5d:3b:50:40"
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "package.json" }}
