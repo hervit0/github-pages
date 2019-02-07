@@ -14,6 +14,7 @@
 ### Circle CI
 
 - [Configuration API](https://circleci.com/docs/2.0/configuration-reference/)
+- [Github pages and Circle CI](https://blog.frederikring.com/articles/deploying-github-pages-circle-ci/)
 
 ### Troubleshooting
 
