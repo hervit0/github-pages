@@ -20,6 +20,7 @@ const Router = () => (
     <div>
       <NavBar />
       <Switch>
+        <pre>{process.env.NODE_ENV}</pre>
         <Route exact path={getHomePath()} component={Prout} />
         <Route path="/dogs" component={Dogs} />
         <Route path="/todo" component={TodoMain} />

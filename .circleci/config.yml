@@ -3,7 +3,7 @@
 
 version: 2
 jobs:
-  buildJob:
+  buildAndDeployJob:
     docker:
       - image: circleci/node:7.10
     working_directory: ~/repo
@@ -26,12 +26,15 @@ jobs:
       - run:
           name: "Run linter"
           command: npm run lint
+      - run:
+          name: "Deploy"
+          command: npm run deploy
 
 workflows:
   version: 2
   shipWorkflow:
     jobs:
-      - buildJob:
+      - buildAndDeployJob:
           filters:
             branches:
               only: master
