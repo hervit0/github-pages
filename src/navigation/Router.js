@@ -12,12 +12,15 @@ const Prout = () => (
   </h1>
 )
 
+const getHomePath = () =>
+  process.env.NODE_ENV === "production" ? "/github-pages/" : "/"
+
 const Router = () => (
   <BrowserRouter>
     <div>
       <NavBar />
       <Switch>
-        <Route exact path="/" component={Prout} />
+        <Route exact path={getHomePath()} component={Prout} />
         <Route path="/dogs" component={Dogs} />
         <Route path="/todo" component={TodoMain} />
         <Route component={Notfound} />
