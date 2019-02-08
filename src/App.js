@@ -18,6 +18,10 @@ class App extends Component {
         <body>
           <Router />
         </body>
+        <footer className="App-footer">
+          <pre>{process.env.NODE_ENV}</pre>
+          <pre>{process.env.REACT_APP_GIT_SHA}</pre>
+        </footer>
       </div>
     )
   }

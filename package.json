@@ -17,11 +17,11 @@
     "typeface-roboto": "0.0.54"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
+    "start": "REACT_APP_GIT_SHA=`git rev-parse --short HEAD` react-scripts start",
+    "build": "REACT_APP_GIT_SHA=`git rev-parse --short HEAD` react-scripts build",
     "test": "react-scripts test",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
+    "deploy": "REACT_APP_GIT_SHA=`git rev-parse --short HEAD` gh-pages -d build",
     "lint": "./node_modules/eslint/bin/eslint.js src/",
     "eject": "react-scripts eject"
   },
