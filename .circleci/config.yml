@@ -10,8 +10,8 @@ jobs:
     environment:
       - SOURCE_BRANCH: master
       - TARGET_BRANCH: gh-pages
-      - GH_EMAIL: hervito@circleci.com
-      - GH_NAME: circle-ci-builder
+      - GH_EMAIL: herve.ahleung@gmail.com
+      - GH_NAME: hervit0
     steps:
       - checkout
       - add_ssh_keys:
