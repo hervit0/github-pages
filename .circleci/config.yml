@@ -1,0 +1,71 @@
+# Javascript Node CircleCI 2.0 configuration file
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+
+version: 2
+jobs:
+  buildAndDeployJob:
+    docker:
+      - image: circleci/node:7.10
+    working_directory: ~/repo
+    environment:
+      - SOURCE_BRANCH: master
+      - TARGET_BRANCH: gh-pages
+      - GH_EMAIL: herve.ahleung@gmail.com
+      - GH_NAME: hervit0
+    steps:
+      - checkout
+      - add_ssh_keys:
+          fingerprints:
+            - "50:ec:0f:3a:e2:5f:ab:bf:15:34:8f:ec:5d:3b:50:40"
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "package.json" }}
+          - v1-dependencies-
+      - run:
+          name: "Install dependencies"
+          command: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run:
+          name: "Run unit tests"
+          command: npm test
+      - run:
+          name: "Run linter"
+          command: npm run lint
+      - run:
+          name: "Deploy"
+          command: |
+            if [ $CIRCLE_BRANCH == $SOURCE_BRANCH ]; then
+              git config --global user.email $GH_EMAIL
+              git config --global user.name $GH_NAME
+
+              git clone $CIRCLE_REPOSITORY_URL out
+
+              cd out
+              git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
+              git rm -rf .
+              cd ..
+
+              npm run build
+
+              cp -a build/. out/.
+
+              mkdir -p out/.circleci && cp -a .circleci/. out/.circleci/.
+              cd out
+
+              git add -A
+              git commit -m "Automated deployment to GitHub Pages: ${CIRCLE_SHA1}" --allow-empty
+
+              git push origin $TARGET_BRANCH
+            fi
+
+workflows:
+  version: 2
+  shipWorkflow:
+    jobs:
+      - buildAndDeployJob:
+          filters:
+            branches:
+              only: master
