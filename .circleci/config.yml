@@ -5,7 +5,7 @@ version: 2
 jobs:
   buildAndDeployJob:
     docker:
-      - image: circleci/node:7.10
+      - image: circleci/node:13.8.0-stretch
     working_directory: ~/repo
     environment:
       - SOURCE_BRANCH: master
