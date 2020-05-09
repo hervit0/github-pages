@@ -3,6 +3,7 @@ import { Route, BrowserRouter, Switch } from 'react-router-dom';
 import NewStoryPage from './pages/newStory/newStoryPage';
 import NotFoundPage from './pages/notFound/notFoundPage';
 import SignInPage from './pages/signIn/signInPage';
+import DemoStoryPage from './pages/story/demoStoryPage';
 import StoryPage from './pages/story/storyPage';
 import UserDashboardPage from './pages/userDashboard/userDashboardPage';
 import WelcomePage from './pages/welcome/welcomePage';
@@ -19,6 +20,7 @@ const Router = () => (
         <Route path={`/${Routes.dashboard}`} component={UserDashboardPage}/>
         <Route path={`/${Routes.newStory}`} component={NewStoryPage}/>
         <Route path={`/${Routes.story}`} component={StoryPage}/>
+        <Route path={`/${Routes.demoStory}`} component={DemoStoryPage}/>
         <Route component={NotFoundPage}/>
       </Switch>
     </div>
@@ -30,6 +32,7 @@ export const Routes = {
   dashboard: 'dashboard',
   newStory: 'newStory',
   story: 'story',
+  demoStory: 'demoStory',
 };
 
 export default Router;

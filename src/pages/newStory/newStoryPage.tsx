@@ -53,7 +53,7 @@ export default function NewStoryPage() {
         color="secondary"
         size="large"
         startIcon={<CreateIcon/>}
-        href={Routes.story}
+        href={Routes.demoStory}
       >
         Start writing!
       </Button>

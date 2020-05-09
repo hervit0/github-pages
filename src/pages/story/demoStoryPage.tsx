@@ -1,14 +1,10 @@
-import { Button } from '@material-ui/core';
 import Chip from '@material-ui/core/Chip';
 import Container from '@material-ui/core/Container';
 import { makeStyles, Theme } from '@material-ui/core/styles';
-import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
-import TelegramIcon from '@material-ui/icons/Telegram';
+import FaceIcon from '@material-ui/icons/Face';
 import React from 'react';
 import StoryLine from '../../components/storyLine/storyLine';
-import { Routes } from '../../Router';
-import DemoStoryPage from './demoStoryPage';
 
 const useStyles = makeStyles((theme: Theme) => ({
     chip: {
@@ -47,15 +43,19 @@ const storyLines = [
       'opinion there was no finer boy anywhere. ',
     metaData: 'Tom, Sun, 31 Dec 1899 00:00:00 GMT'
   },
+  {
+    line: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. You wrote rubbish didn\'t you?',
+    metaData: 'Yourself, Sun, 31 Dec 1899 00:00:00 GMT'
+  },
 ];
 
-const StoryPage = () => {
+const DemoStoryPage = () => {
   const classes = useStyles();
 
   return (
     <>
-      <Chip className={classes.chip} label="Your turn" variant="outlined" color="secondary"/>
-      <Chip className={classes.chip} label="9 sentences left" variant="outlined" color="primary"/>
+      <Chip className={classes.chip} label="Jerry's turn" variant="outlined" color="secondary"/>
+      <Chip className={classes.chip} label="8 sentences left" variant="outlined" color="primary"/>
       <Typography color="textPrimary" variant="h3">
         Tomorrow Never Dies
       </Typography>
@@ -70,30 +70,9 @@ const StoryPage = () => {
         }
       </Container>
 
-      <TextField
-        id="story-write"
-        label="Continue the story"
-        style={{ margin: 8 }}
-        fullWidth
-        multiline
-        rows={3}
-        margin="normal"
-        InputLabelProps={{
-          shrink: true,
-        }}
-      />
-
-      <Button
-        variant="contained"
-        color="secondary"
-        size="large"
-        startIcon={<TelegramIcon/>}
-        href={Routes.demoStory}
-      >
-        Submit
-      </Button>
+      <Chip icon={<FaceIcon/>} className={classes.chip} label="Waiting for Jerry" color="secondary"/>
     </>
   );
 };
 
-export default StoryPage;
+export default DemoStoryPage;
