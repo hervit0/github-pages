@@ -3,6 +3,7 @@ import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles, Theme } from '@material-ui/core/styles';
+import Typography from '@material-ui/core/Typography';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import React from 'react';
 import DashboardActions from './components/dashboardActions';
@@ -10,6 +11,9 @@ import logo from '../../resources/book.jpg';
 import { Routes } from '../../Router';
 
 const useStyles = makeStyles((theme: Theme) => ({
+    typoShare: {
+      margin: theme.spacing(1),
+    },
     root: {
       display: 'flex',
       flexDirection: 'column',
@@ -48,7 +52,9 @@ const UserDashboardPage = () => {
   return (
     <div className={classes.root}>
       <DashboardActions/>
-      <h2>My Stories</h2>
+      <Typography className={classes.typoShare} variant='h3' color="textPrimary">
+        My stories
+      </Typography>
       <GridList className={classes.gridList} cols={2.5}>
         {tileData.map((tile) => (
           <GridListTile key={tile.title}>

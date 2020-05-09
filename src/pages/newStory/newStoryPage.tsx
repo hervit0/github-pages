@@ -23,7 +23,9 @@ export default function NewStoryPage() {
 
   return (
     <div>
-      <h2>Start a new story</h2>
+      <Typography className={classes.typoShare} variant='h3' color="textPrimary">
+        Start a new story
+      </Typography>
       <TextField
         id="story-name"
         label="Story name"
@@ -51,7 +53,7 @@ export default function NewStoryPage() {
         color="secondary"
         size="large"
         startIcon={<CreateIcon/>}
-        href={Routes.dashboard}
+        href={Routes.story}
       >
         Start writing!
       </Button>
