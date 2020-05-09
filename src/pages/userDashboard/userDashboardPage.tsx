@@ -2,11 +2,11 @@ import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
 import GridListTileBar from '@material-ui/core/GridListTileBar';
 import IconButton from '@material-ui/core/IconButton';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import { makeStyles, Theme } from '@material-ui/core/styles';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import React from 'react';
-import DashboardActions from '../../components/dashboardActions/dashboardActions';
-import logo from '../../logo.svg';
+import DashboardActions from './components/dashboardActions';
+import logo from '../../resources/book.jpg';
 import { Routes } from '../../Router';
 
 const useStyles = makeStyles((theme: Theme) => ({

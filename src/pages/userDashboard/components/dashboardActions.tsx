@@ -5,9 +5,9 @@ import CardMedia from '@material-ui/core/CardMedia';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import React from 'react';
-import beginRandomImg from '../../resources/begin-random.jpg';
-import beginImg from '../../resources/begin.jpg';
-import { Routes } from '../../Router';
+import beginRandomImg from '../../../resources/begin-random.jpg';
+import beginImg from '../../../resources/begin.jpg';
+import { Routes } from '../../../Router';
 
 const useStyles = makeStyles({
   dashboardActions: {
@@ -29,7 +29,7 @@ export default function DashboardActions() {
   return (
     <div className={classes.dashboardActions}>
       <Card className={classes.card}>
-        <CardActionArea href={Routes.dashboard}>
+        <CardActionArea href={Routes.newStory}>
           <CardMedia
             className={classes.media}
             image={beginImg}
@@ -37,10 +37,10 @@ export default function DashboardActions() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Start a new story
+              New Story
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
-              Begin a new story with a pal friend!
+              Begin a new story with a pen friend!
             </Typography>
           </CardContent>
         </CardActionArea>
@@ -54,7 +54,7 @@ export default function DashboardActions() {
           />
           <CardContent>
             <Typography gutterBottom variant="h5" component="h2">
-              Join a random story
+              Random story
             </Typography>
             <Typography variant="body2" color="textSecondary" component="p">
               Someone tossed a bottle into the sea. Fancy getting the message?

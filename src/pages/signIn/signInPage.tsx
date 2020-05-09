@@ -27,7 +27,7 @@ const SignInPage = () => {
     <>
       <form className={classes.root} noValidate autoComplete="off">
         <TextField id="username" label="Username" variant="outlined"/>
-        <TextField id="password" label="Password" variant="outlined"/>
+        <TextField id="password" label="Password" variant="outlined" type="password"/>
       </form>
       <Button
         className={classes.button}
