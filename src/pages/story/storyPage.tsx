@@ -8,7 +8,6 @@ import TelegramIcon from '@material-ui/icons/Telegram';
 import React from 'react';
 import StoryLine from '../../components/storyLine/storyLine';
 import { Routes } from '../../Router';
-import DemoStoryPage from './demoStoryPage';
 
 const useStyles = makeStyles((theme: Theme) => ({
     chip: {
