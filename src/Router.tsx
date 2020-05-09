@@ -13,7 +13,6 @@ const Router = () => (
     <div>
       <Switch>
         <Route exact path="/" component={WelcomePage}/>
-        {/*<Route path="/signin" component={SignInPage}/>*/}
         <Route path={`/${RouteNames.signin}`} component={SignInPage}/>
         <Route path={`/${RouteNames.dashboard}`} component={UserDashboardPage}/>
         <Route path={`/${RouteNames.newStory}`} component={NewStoryPage}/>
@@ -34,7 +33,6 @@ const RouteNames = {
 }
 
 export const Routes = {
-  welcome: 'github-pages',
   signin: `#${RouteNames.signin}`,
   dashboard: `#${RouteNames.dashboard}`,
   newStory: `#${RouteNames.newStory}`,

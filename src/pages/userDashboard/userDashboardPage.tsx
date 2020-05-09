@@ -65,7 +65,7 @@ const UserDashboardPage = () => {
                 root: classes.titleBar,
               }}
               actionIcon={
-                <IconButton aria-label={`star ${tile.title}`} href={Routes.signin}>
+                <IconButton aria-label={`star ${tile.title}`} href={Routes.dashboard}>
                   <PlayCircleOutlineIcon/>
                 </IconButton>
               }
