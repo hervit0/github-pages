@@ -8,14 +8,13 @@ import StoryPage from './pages/story/storyPage';
 import UserDashboardPage from './pages/userDashboard/userDashboardPage';
 import WelcomePage from './pages/welcome/welcomePage';
 
-const homePath = () =>
-  process.env.NODE_ENV === 'production' ? '/github-pages' : '';
+const homePath = () => process.env.PUBLIC_URL;
 
 const Router = () => (
   <BrowserRouter>
     <div>
       <Switch>
-        <Route exact path={`${homePath()}/`} component={WelcomePage}/>
+        <Route path={`${homePath()}/`} component={WelcomePage}/>
         <Route path={`${homePath()}/${Routes.welcome}`} component={WelcomePage}/>
         <Route path={`${homePath()}/${Routes.signin}`} component={SignInPage}/>
         <Route path={`${homePath()}/${Routes.dashboard}`} component={UserDashboardPage}/>

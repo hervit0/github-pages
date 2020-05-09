@@ -1,13 +1,13 @@
 import AppBar from '@material-ui/core/AppBar';
+import Badge from '@material-ui/core/Badge';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
-import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import DashboardIcon from '@material-ui/icons/Dashboard';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
+import NotificationsIcon from '@material-ui/icons/Notifications';
 import React from 'react';
-import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
-import Badge from '@material-ui/core/Badge';
 import { Routes } from '../../Router';
 
 const useStyles = makeStyles((theme) => ({
@@ -37,7 +37,7 @@ const CustomAppBar = () => {
           </Typography>
           <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="notification">
             <Badge badgeContent={Math.floor(Math.random() * 10)} color="secondary">
-              <NotificationsActiveIcon/>
+              <NotificationsIcon/>
             </Badge>
           </IconButton>
           <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="exit" href={Routes.signin}>
