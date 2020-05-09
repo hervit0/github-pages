@@ -7,6 +7,9 @@ import { Routes } from '../../Router';
 
 const useStyles = makeStyles((theme) => ({
   root: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
     '& > *': {
       margin: theme.spacing(1),
       width: '25ch',
@@ -32,7 +35,7 @@ const SignInPage = () => {
         color="secondary"
         size="large"
         startIcon={<LockOpenIcon/>}
-        href={Routes.signin}
+        href={Routes.dashboard}
       >
         Login
       </Button>
