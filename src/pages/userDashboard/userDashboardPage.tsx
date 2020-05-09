@@ -5,10 +5,11 @@ import IconButton from '@material-ui/core/IconButton';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import React from 'react';
+import DashboardActions from '../../components/dashboardActions/dashboardActions';
 import logo from '../../logo.svg';
+import { Routes } from '../../Router';
 
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
+const useStyles = makeStyles((theme: Theme) => ({
     root: {
       display: 'flex',
       flexDirection: 'column',
@@ -31,13 +32,13 @@ const useStyles = makeStyles((theme: Theme) =>
 
 const tileData = [
   {
-    title: 'Barry Trotter'
+    title: 'Parry Hotter'
   },
   {
-    title: 'Yarry Poster'
+    title: 'Germione Hanger'
   },
   {
-    title: 'Dobby Potter'
+    title: 'Won Reasley'
   },
 ];
 
@@ -46,6 +47,7 @@ const UserDashboardPage = () => {
 
   return (
     <div className={classes.root}>
+      <DashboardActions/>
       <h2>My Stories</h2>
       <GridList className={classes.gridList} cols={2.5}>
         {tileData.map((tile) => (
@@ -57,7 +59,7 @@ const UserDashboardPage = () => {
                 root: classes.titleBar,
               }}
               actionIcon={
-                <IconButton aria-label={`star ${tile.title}`}>
+                <IconButton aria-label={`star ${tile.title}`} href={Routes.signin}>
                   <PlayCircleOutlineIcon/>
                 </IconButton>
               }
