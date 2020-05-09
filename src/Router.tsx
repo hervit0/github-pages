@@ -16,6 +16,7 @@ const Router = () => (
     <div>
       <Switch>
         <Route exact path={`${homePath()}/`} component={WelcomePage}/>
+        <Route path={`${homePath()}/${Routes.welcome}`} component={WelcomePage}/>
         <Route path={`${homePath()}/${Routes.signin}`} component={SignInPage}/>
         <Route path={`${homePath()}/${Routes.dashboard}`} component={UserDashboardPage}/>
         <Route path={`${homePath()}/${Routes.newStory}`} component={NewStoryPage}/>
@@ -28,6 +29,7 @@ const Router = () => (
 );
 
 export const Routes = {
+  welcome: 'github-pages',
   signin: 'signin',
   dashboard: 'dashboard',
   newStory: 'newStory',
