@@ -8,19 +8,19 @@ import StoryPage from './pages/story/storyPage';
 import UserDashboardPage from './pages/userDashboard/userDashboardPage';
 import WelcomePage from './pages/welcome/welcomePage';
 
-const getHomePath = () =>
-  process.env.NODE_ENV === 'production' ? '/github-pages/' : '/';
+const homePath = () =>
+  process.env.NODE_ENV === 'production' ? '/github-pages' : '';
 
 const Router = () => (
   <BrowserRouter>
     <div>
       <Switch>
-        <Route exact path={getHomePath()} component={WelcomePage}/>
-        <Route path={`/${Routes.signin}`} component={SignInPage}/>
-        <Route path={`/${Routes.dashboard}`} component={UserDashboardPage}/>
-        <Route path={`/${Routes.newStory}`} component={NewStoryPage}/>
-        <Route path={`/${Routes.story}`} component={StoryPage}/>
-        <Route path={`/${Routes.demoStory}`} component={DemoStoryPage}/>
+        <Route exact path={`${homePath()}/`} component={WelcomePage}/>
+        <Route path={`${homePath()}/${Routes.signin}`} component={SignInPage}/>
+        <Route path={`${homePath()}/${Routes.dashboard}`} component={UserDashboardPage}/>
+        <Route path={`${homePath()}/${Routes.newStory}`} component={NewStoryPage}/>
+        <Route path={`${homePath()}/${Routes.story}`} component={StoryPage}/>
+        <Route path={`${homePath()}/${Routes.demoStory}`} component={DemoStoryPage}/>
         <Route component={NotFoundPage}/>
       </Switch>
     </div>
