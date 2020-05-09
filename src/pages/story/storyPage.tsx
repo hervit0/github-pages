@@ -53,8 +53,8 @@ const StoryPage = () => {
 
   return (
     <>
-      <Chip className={classes.chip} label="Your turn" variant="outlined" color="secondary"/>
-      <Chip className={classes.chip} label="9 sentences left" variant="outlined" color="primary"/>
+      <Chip className={classes.chip} label="Your turn" variant="outlined" color="secondary" size="medium"/>
+      <Chip className={classes.chip} label="9 sentences left" variant="outlined" color="primary" size="medium"/>
       <Typography color="textPrimary" variant="h3">
         Tomorrow Never Dies
       </Typography>
