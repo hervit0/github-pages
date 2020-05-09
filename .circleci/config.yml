@@ -31,9 +31,9 @@ jobs:
       - run:
           name: "Run unit tests"
           command: npm test
-      - run:
-          name: "Run linter"
-          command: npm run lint
+#      - run:
+#          name: "Run linter"
+#          command: npm run lint
       - run:
           name: "Deploy"
           command: |

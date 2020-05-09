@@ -1,11 +1,11 @@
-import React from 'react';
-import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
+import IconButton from '@material-ui/core/IconButton';
+import { makeStyles } from '@material-ui/core/styles';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import Button from '@material-ui/core/Button';
-import IconButton from '@material-ui/core/IconButton';
-import MenuIcon from '@material-ui/icons/Menu';
+import DashboardIcon from '@material-ui/icons/Dashboard';
+import React from 'react';
 import { Routes } from '../../Router';
 
 const useStyles = makeStyles((theme) => ({
@@ -27,13 +27,15 @@ const CustomAppBar = () => {
     <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon/>
+          <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu" href={Routes.dashboard}>
+            <DashboardIcon/>
           </IconButton>
-          <Typography variant="h6" className={classes.title}>
+          <Typography variant="h4" className={classes.title}>
             Story Tok
           </Typography>
-          <Button color="inherit" href={Routes.signin}>Login</Button>
+          <IconButton edge="end" className={classes.menuButton} color="inherit" aria-label="menu" href={Routes.signin}>
+            <ExitToAppIcon/>
+          </IconButton>
         </Toolbar>
       </AppBar>
     </div>

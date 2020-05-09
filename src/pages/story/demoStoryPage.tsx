@@ -44,7 +44,7 @@ const storyLines = [
     metaData: 'Tom, Sun, 31 Dec 1899 00:00:00 GMT'
   },
   {
-    line: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. You wrote rubbish didn\'t you?',
+    line: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. You wrote rubbish, didn\'t you?',
     metaData: 'Yourself, Sun, 31 Dec 1899 00:00:00 GMT'
   },
 ];
