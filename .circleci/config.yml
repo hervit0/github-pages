@@ -16,6 +16,8 @@ jobs:
       - checkout
       - add_ssh_keys:
           fingerprints:
+            - "1f:8b:08:81:74:91:5e:40:53:4b:23:47:82:82:fa:8c"
+#           created with read/write access here: https://github.com/hervit0/github-pages/settings/keys
             - "50:ec:0f:3a:e2:5f:ab:bf:15:34:8f:ec:5d:3b:50:40"
       - restore_cache:
           keys:
