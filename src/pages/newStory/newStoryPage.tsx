@@ -8,7 +8,7 @@ import FileCopyIcon from '@material-ui/icons/FileCopy';
 import React from 'react';
 import CustomHeader from '../../components/header/header';
 import PageContainer from '../../components/pageContainer/pageContainer';
-import { Routes } from '../../Router';
+import { Routes } from '../../navigation/router';
 
 const useStyles = makeStyles((theme) => ({
   typoShare: {

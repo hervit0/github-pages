@@ -8,7 +8,7 @@ import DashboardIcon from '@material-ui/icons/Dashboard';
 import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 import NotificationsIcon from '@material-ui/icons/Notifications';
 import React from 'react';
-import { Routes } from '../../Router';
+import { Routes } from '../../navigation/router';
 
 const useStyles = makeStyles((theme) => ({
   root: {

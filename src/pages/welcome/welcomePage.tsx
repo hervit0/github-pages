@@ -6,7 +6,7 @@ import React from 'react';
 import CustomHeader from '../../components/header/header';
 import PageContainer from '../../components/pageContainer/pageContainer';
 import logo from '../../logo.svg';
-import { Routes } from '../../Router';
+import { Routes } from '../../navigation/router';
 
 const useStyles = makeStyles((theme) => ({
   button: {

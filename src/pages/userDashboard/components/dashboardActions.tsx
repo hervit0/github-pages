@@ -7,7 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import React from 'react';
 import beginRandomImg from '../../../resources/begin-random.jpg';
 import beginImg from '../../../resources/begin.jpg';
-import { Routes } from '../../../Router';
+import { Routes } from '../../../navigation/router';
 
 const useStyles = makeStyles({
   dashboardActions: {

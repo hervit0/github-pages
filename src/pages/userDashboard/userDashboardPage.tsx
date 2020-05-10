@@ -9,7 +9,7 @@ import React from 'react';
 import CustomHeader from '../../components/header/header';
 import PageContainer from '../../components/pageContainer/pageContainer';
 import logo from '../../resources/book.jpg';
-import { Routes } from '../../Router';
+import { Routes } from '../../navigation/router';
 import DashboardActions from './components/dashboardActions';
 
 const useStyles = makeStyles((theme: Theme) => ({

@@ -9,7 +9,7 @@ import React from 'react';
 import PageContainer from '../../components/pageContainer/pageContainer';
 import Box from '@material-ui/core/Box';
 import StoryLine from '../../components/storyLine/storyLine';
-import { Routes } from '../../Router';
+import { Routes } from '../../navigation/router';
 
 const useStyles = makeStyles((theme: Theme) => ({
     chipsBox: {
