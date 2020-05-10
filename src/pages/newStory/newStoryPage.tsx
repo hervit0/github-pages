@@ -1,4 +1,4 @@
-import { Button } from '@material-ui/core';
+import { Box, Button } from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
@@ -7,6 +7,7 @@ import CreateIcon from '@material-ui/icons/Create';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import React from 'react';
 import CustomHeader from '../../components/header/header';
+import PageContainer from '../../components/pageContainer/pageContainer';
 import { Routes } from '../../Router';
 
 const useStyles = makeStyles((theme) => ({
@@ -16,6 +17,10 @@ const useStyles = makeStyles((theme) => ({
   link: {
     display: 'flex',
     flexDirection: 'row',
+    alignItems: 'center',
+  },
+  startButton: {
+    marginTop: theme.spacing(1),
   }
 }));
 
@@ -23,19 +28,18 @@ export default function NewStoryPage() {
   const classes = useStyles();
 
   return (
-    <div>
+    <PageContainer>
       <CustomHeader header='Start a new story'/>
 
       <Typography className={classes.typoShare} variant="body1" color="textPrimary" component="p">
-        Begin a new story with a friend.
+        Begin a new story with a friend. You will alternatively complete the story, turn by turn. Just start by giving a name to your story.
       </Typography>
       <TextField
         id="story-name"
-        label="Story name"
         style={{ margin: 8 }}
-        placeholder="Write the name of your story"
-        fullWidth
+        placeholder="Name of your story"
         margin="normal"
+        size='medium'
         InputLabelProps={{
           shrink: true,
         }}
@@ -51,15 +55,17 @@ export default function NewStoryPage() {
           <FileCopyIcon/>
         </IconButton>
       </div>
-      <Button
-        variant="contained"
-        color="secondary"
-        size="large"
-        startIcon={<CreateIcon/>}
-        href={Routes.story}
-      >
-        Start writing!
-      </Button>
-    </div>
+      <Box className={classes.startButton}>
+        <Button
+          variant="contained"
+          color="secondary"
+          size="large"
+          startIcon={<CreateIcon/>}
+          href={Routes.story}
+        >
+          Start writing!
+        </Button>
+      </Box>
+    </PageContainer>
   );
 }

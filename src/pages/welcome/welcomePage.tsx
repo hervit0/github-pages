@@ -1,18 +1,14 @@
 import { Button } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
-import LockOpenIcon from '@material-ui/icons/LockOpen';
 import FiberNewIcon from '@material-ui/icons/FiberNew';
+import LockOpenIcon from '@material-ui/icons/LockOpen';
 import React from 'react';
 import CustomHeader from '../../components/header/header';
+import PageContainer from '../../components/pageContainer/pageContainer';
 import logo from '../../logo.svg';
 import { Routes } from '../../Router';
 
 const useStyles = makeStyles((theme) => ({
-  welcomePage: {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-  },
   button: {
     margin: theme.spacing(1),
   }
@@ -22,7 +18,7 @@ const WelcomePage = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.welcomePage}>
+    <PageContainer>
       <CustomHeader header='Welcome'/>
       <img src={logo} className="App-logo" alt="logo"/>
       <Button
@@ -44,7 +40,7 @@ const WelcomePage = () => {
       >
         Sign up
       </Button>
-    </div>
+    </PageContainer>
   );
 };
 

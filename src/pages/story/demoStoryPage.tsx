@@ -1,12 +1,18 @@
+import Box from '@material-ui/core/Box';
 import Chip from '@material-ui/core/Chip';
 import Container from '@material-ui/core/Container';
 import { makeStyles, Theme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import FaceIcon from '@material-ui/icons/Face';
 import React from 'react';
+import PageContainer from '../../components/pageContainer/pageContainer';
 import StoryLine from '../../components/storyLine/storyLine';
 
 const useStyles = makeStyles((theme: Theme) => ({
+    chipsBox: {
+      display: 'flex',
+      flexDirection: 'row',
+    },
     chip: {
       margin: '10px',
     },
@@ -53,9 +59,12 @@ const DemoStoryPage = () => {
   const classes = useStyles();
 
   return (
-    <>
-      <Chip className={classes.chip} label="Jerry's turn" variant="outlined" color="secondary" size="medium"/>
-      <Chip className={classes.chip} label="8 sentences left" variant="outlined" color="primary" size="medium"/>
+    <PageContainer>
+      <Box className={classes.chipsBox}>
+        <Chip className={classes.chip} label="Jerry's turn" variant="outlined" color="secondary" size="medium"/>
+        <Chip className={classes.chip} label="8 sentences left" variant="outlined" color="primary" size="medium"/>
+      </Box>
+
       <Typography color="textPrimary" variant="h3">
         Tomorrow Never Dies
       </Typography>
@@ -71,7 +80,7 @@ const DemoStoryPage = () => {
       </Container>
 
       <Chip icon={<FaceIcon/>} className={classes.chip} label="Waiting for Jerry" color="secondary"/>
-    </>
+    </PageContainer>
   );
 };
 

@@ -6,10 +6,16 @@ import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import TelegramIcon from '@material-ui/icons/Telegram';
 import React from 'react';
+import PageContainer from '../../components/pageContainer/pageContainer';
+import Box from '@material-ui/core/Box';
 import StoryLine from '../../components/storyLine/storyLine';
 import { Routes } from '../../Router';
 
 const useStyles = makeStyles((theme: Theme) => ({
+    chipsBox: {
+      display: 'flex',
+      flexDirection: 'row',
+    },
     chip: {
       margin: '10px',
     },
@@ -52,9 +58,11 @@ const StoryPage = () => {
   const classes = useStyles();
 
   return (
-    <>
-      <Chip className={classes.chip} label="Your turn" variant="outlined" color="secondary" size="medium"/>
-      <Chip className={classes.chip} label="9 sentences left" variant="outlined" color="primary" size="medium"/>
+    <PageContainer>
+      <Box className={classes.chipsBox}>
+        <Chip className={classes.chip} label="Your turn" variant="outlined" color="secondary" size="medium"/>
+        <Chip className={classes.chip} label="9 sentences left" variant="outlined" color="primary" size="medium"/>
+      </Box>
       <Typography color="textPrimary" variant="h3">
         Tomorrow Never Dies
       </Typography>
@@ -91,7 +99,7 @@ const StoryPage = () => {
       >
         Submit
       </Button>
-    </>
+    </PageContainer>
   );
 };
 

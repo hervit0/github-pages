@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import React from 'react';
 import CustomHeader from '../../components/header/header';
+import PageContainer from '../../components/pageContainer/pageContainer';
 import logo from '../../resources/book.jpg';
 import { Routes } from '../../Router';
 import DashboardActions from './components/dashboardActions';
@@ -45,7 +46,7 @@ const UserDashboardPage = () => {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
+    <PageContainer>
       <CustomHeader header='Dashboard'/>
       <DashboardActions/>
       <Typography className={classes.typoShare} variant='h4' color="textPrimary">
@@ -69,7 +70,7 @@ const UserDashboardPage = () => {
           </GridListTile>
         ))}
       </GridList>
-    </div>
+    </PageContainer>
   );
 };
 

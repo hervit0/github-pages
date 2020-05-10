@@ -10,17 +10,15 @@ import WelcomePage from './pages/welcome/welcomePage';
 
 const Router = () => (
   <HashRouter basename='/'>
-    <div>
-      <Switch>
-        <Route exact path="/" component={WelcomePage}/>
-        <Route path={`/${RouteNames.signin}`} component={SignInPage}/>
-        <Route path={`/${RouteNames.dashboard}`} component={UserDashboardPage}/>
-        <Route path={`/${RouteNames.newStory}`} component={NewStoryPage}/>
-        <Route path={`/${RouteNames.story}`} component={StoryPage}/>
-        <Route path={`/${RouteNames.demoStory}`} component={DemoStoryPage}/>
-        <Route component={NotFoundPage}/>
-      </Switch>
-    </div>
+    <Switch>
+      <Route exact path="/" component={WelcomePage}/>
+      <Route path={`/${RouteNames.signin}`} component={SignInPage}/>
+      <Route path={`/${RouteNames.dashboard}`} component={UserDashboardPage}/>
+      <Route path={`/${RouteNames.newStory}`} component={NewStoryPage}/>
+      <Route path={`/${RouteNames.story}`} component={StoryPage}/>
+      <Route path={`/${RouteNames.demoStory}`} component={DemoStoryPage}/>
+      <Route component={NotFoundPage}/>
+    </Switch>
   </HashRouter>
 );
 
@@ -30,7 +28,7 @@ const RouteNames = {
   newStory: 'newStory',
   story: 'story',
   demoStory: 'demoStory',
-}
+};
 
 export const Routes = {
   signin: `#${RouteNames.signin}`,
