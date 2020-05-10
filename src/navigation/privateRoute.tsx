@@ -1,6 +1,7 @@
 import React from 'react';
 import { Redirect, Route } from 'react-router-dom';
 import { useAuth } from '../contexts/auth';
+import { isAuthenticated } from '../services/authentication';
 import { RouteNames } from './router';
 
 type PrivateRouteProps = {
@@ -11,12 +12,8 @@ type PrivateRouteProps = {
 const PrivateRoute = ({ component, path }: PrivateRouteProps) => {
   const { authTokens } = useAuth();
 
-  const isValid = (authTokens?: string) => {
-    return !!authTokens && authTokens!.length !== 0;
-  };
-
   return (
-    isValid(authTokens) ? (
+    isAuthenticated(authTokens) ? (
       <Route path={path} component={component}/>
     ) : (
       <Redirect to={RouteNames.signin}/>

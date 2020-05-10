@@ -52,7 +52,7 @@ const SignInPage = (props: any) => {
   };
 
   if (isLoggedIn) {
-    return (<Redirect to={RouteNames.root}/>);
+    return (<Redirect to={RouteNames.dashboard}/>);
   }
 
   return (
@@ -69,7 +69,6 @@ const SignInPage = (props: any) => {
         color="secondary"
         size="large"
         startIcon={<LockOpenIcon/>}
-        // href={Routes.dashboard}
         onClick={handleLoginButtonClick}
       >
         Login

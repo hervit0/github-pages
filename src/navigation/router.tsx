@@ -33,6 +33,7 @@ export const RouteNames = {
 };
 
 export const Routes = {
+  root: '/',
   signin: `#${RouteNames.signin}`,
   dashboard: `#${RouteNames.dashboard}`,
   newStory: `#${RouteNames.newStory}`,
