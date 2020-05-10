@@ -6,9 +6,10 @@ import { makeStyles, Theme } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import PlayCircleOutlineIcon from '@material-ui/icons/PlayCircleOutline';
 import React from 'react';
-import DashboardActions from './components/dashboardActions';
+import CustomHeader from '../../components/header/header';
 import logo from '../../resources/book.jpg';
 import { Routes } from '../../Router';
+import DashboardActions from './components/dashboardActions';
 
 const useStyles = makeStyles((theme: Theme) => ({
     typoShare: {
@@ -35,15 +36,9 @@ const useStyles = makeStyles((theme: Theme) => ({
 );
 
 const tileData = [
-  {
-    title: 'Parry Hotter'
-  },
-  {
-    title: 'Germione Hanger'
-  },
-  {
-    title: 'Won Reasley'
-  },
+  { title: 'Parry Hotter' },
+  { title: 'Germione Hanger' },
+  { title: 'Won Reasley' },
 ];
 
 const UserDashboardPage = () => {
@@ -51,8 +46,9 @@ const UserDashboardPage = () => {
 
   return (
     <div className={classes.root}>
+      <CustomHeader header='Dashboard'/>
       <DashboardActions/>
-      <Typography className={classes.typoShare} variant='h3' color="textPrimary">
+      <Typography className={classes.typoShare} variant='h4' color="textPrimary">
         My stories
       </Typography>
       <GridList className={classes.gridList} cols={2.5}>

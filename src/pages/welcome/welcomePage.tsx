@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import LockOpenIcon from '@material-ui/icons/LockOpen';
 import FiberNewIcon from '@material-ui/icons/FiberNew';
 import React from 'react';
+import CustomHeader from '../../components/header/header';
 import logo from '../../logo.svg';
 import { Routes } from '../../Router';
 
@@ -22,6 +23,7 @@ const WelcomePage = () => {
 
   return (
     <div className={classes.welcomePage}>
+      <CustomHeader header='Welcome'/>
       <img src={logo} className="App-logo" alt="logo"/>
       <Button
         className={classes.button}

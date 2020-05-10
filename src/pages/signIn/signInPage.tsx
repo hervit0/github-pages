@@ -3,6 +3,7 @@ import LockOpenIcon from '@material-ui/icons/LockOpen';
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import TextField from '@material-ui/core/TextField';
+import CustomHeader from '../../components/header/header';
 import { Routes } from '../../Router';
 
 const useStyles = makeStyles((theme) => ({
@@ -25,6 +26,7 @@ const SignInPage = () => {
 
   return (
     <>
+      <CustomHeader header='Sign in'/>
       <form className={classes.root} noValidate autoComplete="off">
         <TextField id="username" label="Username" variant="outlined"/>
         <TextField id="password" label="Password" variant="outlined" type="password"/>

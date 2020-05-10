@@ -6,6 +6,7 @@ import Typography from '@material-ui/core/Typography';
 import CreateIcon from '@material-ui/icons/Create';
 import FileCopyIcon from '@material-ui/icons/FileCopy';
 import React from 'react';
+import CustomHeader from '../../components/header/header';
 import { Routes } from '../../Router';
 
 const useStyles = makeStyles((theme) => ({
@@ -23,8 +24,10 @@ export default function NewStoryPage() {
 
   return (
     <div>
-      <Typography className={classes.typoShare} variant='h3' color="textPrimary">
-        Start a new story
+      <CustomHeader header='Start a new story'/>
+
+      <Typography className={classes.typoShare} variant="body1" color="textPrimary" component="p">
+        Begin a new story with a friend.
       </Typography>
       <TextField
         id="story-name"
