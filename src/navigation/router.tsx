@@ -7,21 +7,20 @@ import DemoStoryPage from '../pages/story/demoStoryPage';
 import StoryPage from '../pages/story/storyPage';
 import UserDashboardPage from '../pages/userDashboard/userDashboardPage';
 import WelcomePage from '../pages/welcome/welcomePage';
-import AuthenticationContainer from './authenticationLayer';
 import PrivateRoute from './privateRoute';
 
 const Router = () => (
-    <HashRouter basename='/'>
-      <Switch>
-        <Route exact path={RouteNames.root} component={WelcomePage}/>
-        <Route path={`/${RouteNames.signin}`} component={SignInPage}/>
-        <PrivateRoute path={`/${RouteNames.dashboard}`} component={UserDashboardPage}/>
-        <PrivateRoute path={`/${RouteNames.newStory}`} component={NewStoryPage}/>
-        <PrivateRoute path={`/${RouteNames.story}`} component={StoryPage}/>
-        <PrivateRoute path={`/${RouteNames.demoStory}`} component={DemoStoryPage}/>
-        <Route component={NotFoundPage}/>
-      </Switch>
-    </HashRouter>
+  <HashRouter basename='/'>
+    <Switch>
+      <Route exact path={RouteNames.root} component={WelcomePage}/>
+      <Route path={`/${RouteNames.signin}`} component={SignInPage}/>
+      <PrivateRoute path={`/${RouteNames.dashboard}`} component={UserDashboardPage}/>
+      <PrivateRoute path={`/${RouteNames.newStory}`} component={NewStoryPage}/>
+      <PrivateRoute path={`/${RouteNames.story}`} component={StoryPage}/>
+      <PrivateRoute path={`/${RouteNames.demoStory}`} component={DemoStoryPage}/>
+      <Route component={NotFoundPage}/>
+    </Switch>
+  </HashRouter>
 );
 
 export const RouteNames = {
